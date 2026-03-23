@@ -126,7 +126,7 @@ export const navLinks = [
   { name: 'من نحن', path: '/about' },
   { name: 'خدماتنا', path: '/services' },
   { name: 'أعمالنا', path: '/portfolio' },
-  { name: 'المدونة', path: '/blog', active: true },
+  { name: 'المدونة', path: '/blog' },
   { name: 'تواصل معنا', path: '/contact' }
 ];
 

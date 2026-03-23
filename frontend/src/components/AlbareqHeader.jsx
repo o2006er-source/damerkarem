@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { navLinks, socialLinks, contactInfo } from '../data/albareq-mock';
 import { Search, Menu, X, Facebook, Linkedin, Instagram, MessageCircle, Mail, Palette } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const AlbareqHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const getSocialIcon = (iconName) => {
     const icons = {
@@ -16,6 +17,10 @@ const AlbareqHeader = () => {
       palette: <Palette className="w-4 h-4" />
     };
     return icons[iconName] || null;
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -66,13 +71,13 @@ const AlbareqHeader = () => {
                 key={index}
                 to={link.path}
                 className={`text-base font-medium transition-colors relative pb-1 ${
-                  link.active
+                  isActive(link.path)
                     ? 'text-[#FFB366]'
                     : 'text-white hover:text-[#FFB366]'
                 }`}
               >
                 {link.name}
-                {link.active && (
+                {isActive(link.path) && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FFB366]"></span>
                 )}
               </Link>
@@ -97,7 +102,7 @@ const AlbareqHeader = () => {
                   key={index}
                   to={link.path}
                   className={`text-base font-medium transition-colors ${
-                    link.active ? 'text-[#FFB366]' : 'text-white hover:text-[#FFB366]'
+                    isActive(link.path) ? 'text-[#FFB366]' : 'text-white hover:text-[#FFB366]'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
