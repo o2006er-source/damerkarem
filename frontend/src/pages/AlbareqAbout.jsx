@@ -2,9 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const AlbareqAbout = () => {
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+  const scrollContainerRef = React.useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const newPosition = scrollPosition - 400;
+      scrollContainerRef.current.scrollTo({
+        left: newPosition,
+        behavior: 'smooth'
+      });
+      setScrollPosition(newPosition);
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const newPosition = scrollPosition + 400;
+      scrollContainerRef.current.scrollTo({
+        left: newPosition,
+        behavior: 'smooth'
+      });
+      setScrollPosition(newPosition);
+    }
+  };
+
   const skills = [
     { name: 'تصميم الشعارات', value: 90 },
     { name: 'الهويات البصرية', value: 85 },
@@ -195,8 +220,30 @@ const AlbareqAbout = () => {
           </div>
           
           {/* Animated Software Icons Carousel */}
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll">
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#FFB366] hover:bg-[#FFA04D] rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300"
+              aria-label="السابق"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            <button
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#FFB366] hover:bg-[#FFA04D] rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300"
+              aria-label="التالي"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Scrollable Container */}
+            <div 
+              ref={scrollContainerRef}
+              className="overflow-x-auto overflow-y-hidden scrollbar-hide"
+              style={{ scrollBehavior: 'smooth' }}
+            >
+              <div className="flex animate-scroll" style={{ minWidth: 'max-content' }}>
               {/* First Set */}
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
@@ -399,6 +446,7 @@ const AlbareqAbout = () => {
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/120px-CSS3_logo.svg.png" alt="CSS3" className="w-full h-full object-contain" />
                 </div>
+              </div>
               </div>
             </div>
           </div>
