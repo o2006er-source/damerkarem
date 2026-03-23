@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { ArrowLeft } from 'lucide-react';
+import { projectsData } from '../data/projects-data';
 
 const AlbareqServices = () => {
   const services = [
@@ -259,28 +260,43 @@ const AlbareqServices = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projects.map((project) => (
-              <Card 
-                key={project.id} 
-                className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
+            {projects.map((project) => {
+              // Find matching project with slug from shared data
+              const projectWithSlug = projectsData.find(p => p.id === project.id);
+              const slug = projectWithSlug ? projectWithSlug.slug : null;
+              
+              const cardContent = (
+                <Card 
+                  className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                >
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-4 text-right">
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm">
+                      {project.description}
+                    </p>
+                  </div>
+                </Card>
+              );
+              
+              return slug ? (
+                <Link to={`/portfolio/${slug}`} key={project.id}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={project.id}>
+                  {cardContent}
                 </div>
-                <div className="p-4 text-right">
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm">
-                    {project.description}
-                  </p>
-                </div>
-              </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
