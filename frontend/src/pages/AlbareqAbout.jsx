@@ -182,6 +182,54 @@ const AlbareqAbout = () => {
         </div>
       </section>
 
+      {/* Software Tools Section */}
+      <section className="py-20 px-6 bg-[#1a2f52]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FFB366] mb-6">
+              البرامج التي نستخدمها
+            </h2>
+            <p className="text-xl text-gray-200 max-w-4xl mx-auto">
+              نحن نستخدم أحدث برامج التصميم والبرمجة والتسويق الإلكتروني لضمان حصولك على أفضل النتائج
+            </p>
+          </div>
+          
+          {/* Software Icons Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-6 items-center">
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Google_Ads_logo.svg/120px-Google_Ads_logo.svg.png" alt="Google Ads" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/120px-Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Illustrator" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/120px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Adobe Premiere Pro" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/120px-Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/120px-Adobe_After_Effects_CC_icon.svg.png" alt="Adobe After Effects" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/120px-Adobe_InDesign_CC_icon.svg.png" alt="Adobe InDesign" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/WordPress_Blue_logo.png/120px-WordPress_Blue_logo.png" alt="WordPress CMS" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/120px-WordPress_blue_logo.svg.png" alt="WP" className="h-16 object-contain" />
+            </div>
+            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/120px-Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" className="h-16 object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section className="py-20 px-6 bg-[#1e3a61]">
         <div className="max-w-7xl mx-auto">
