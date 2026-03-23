@@ -597,6 +597,31 @@ const AlbareqHomeComplete = () => {
           </Card>
         </div>
       </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 px-6 bg-gradient-to-r from-[#2E5AAC] to-[#3d6bc4]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              اشترك في نشرتنا الإخبارية لتصلك آخر تحديثاتنا
+            </h2>
+          </div>
+          <form onSubmit={(e) => { e.preventDefault(); alert('شكراً لاشتراكك في النشرة الإخبارية!'); }} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+            <Input
+              type="email"
+              placeholder="أدخل عنوان بريدك الإلكتروني"
+              className="bg-white border-0 text-gray-900 placeholder:text-gray-500 py-6 px-6 text-lg flex-1"
+              required
+            />
+            <Button 
+              type="submit"
+              className="bg-[#FFB366] hover:bg-[#FFA04D] text-white px-12 py-6 text-lg rounded-full whitespace-nowrap"
+            >
+              اشترك
+            </Button>
+          </form>
+        </div>
+      </section>
     </div>
   );
 };
