@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { navLinks, socialLinks, contactInfo } from '../data/albareq-mock';
+import { navLinks, socialLinks, companyInfo } from '../data/albareq-mock';
 import { Search, Menu, X, Facebook, Linkedin, Instagram, MessageCircle, Mail, Palette } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -29,13 +29,13 @@ const AlbareqHeader = () => {
       <div className="bg-[#1a2f52] border-b border-[#2d4268] py-2 px-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 text-white hover:text-[#FFB366] transition-colors">
+            <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-2 text-white hover:text-[#FFB366] transition-colors">
               <Mail className="w-4 h-4" />
-              <span>{contactInfo.email}</span>
+              <span>{companyInfo.email}</span>
             </a>
-            <a href={`https://wa.me/${contactInfo.whatsapp}`} className="flex items-center gap-2 text-white hover:text-[#FFB366] transition-colors">
+            <a href={`https://wa.me/${companyInfo.whatsapp}`} className="flex items-center gap-2 text-white hover:text-[#FFB366] transition-colors">
               <MessageCircle className="w-4 h-4" />
-              <span>{contactInfo.whatsapp}</span>
+              <span>{companyInfo.whatsapp}</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
