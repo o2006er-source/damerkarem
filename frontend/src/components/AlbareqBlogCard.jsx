@@ -32,9 +32,10 @@ const AlbareqBlogCard = ({ post }) => {
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Avatar className="w-8 h-8">
-              <AvatarImage src="/albareq-logo.png" />
+              <AvatarImage src={post.authorAvatar || "/albareq-logo.png"} />
               <AvatarFallback className="bg-[#FFB366] text-white text-xs">ب</AvatarFallback>
             </Avatar>
+            <span className="text-gray-200 text-sm">{post.author}</span>
           </div>
           <Badge className="bg-[#FFB366] hover:bg-[#FFA04D] text-white border-0 text-xs">
             {post.category}
@@ -52,7 +53,7 @@ const AlbareqBlogCard = ({ post }) => {
         {/* Read More Button */}
         <Link to={`/blog/${post.slug}`}>
           <Button className="w-full bg-[#FFB366] hover:bg-[#FFA04D] text-white border-0 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group/btn">
-            <span>اقرأ المزيد</span>
+            <span>اقرأ أكثر</span>
             <ArrowLeft className="w-4 h-4 group-hover/btn:-translate-x-1 transition-transform" />
           </Button>
         </Link>
