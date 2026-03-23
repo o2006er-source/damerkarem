@@ -59,9 +59,21 @@ const AlbareqHeader = () => {
       {/* Main Navigation */}
       <nav className="bg-[#2E5AAC] px-6 py-4 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src="/albareq-logo.png" alt="شركة البريق" className="h-14 w-auto" />
+          {/* Logo with Company Name */}
+          <Link to="/" className="flex items-center gap-4 group">
+            <img 
+              src="/albareq-logo.png" 
+              alt="شركة البريق" 
+              className="h-14 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
+            />
+            <div className="hidden md:flex flex-col text-right">
+              <h1 className="text-white font-bold text-lg leading-tight animate-fade-in-right">
+                شركة البريق
+              </h1>
+              <p className="text-[#FFB366] text-xs leading-tight animate-fade-in-right-delay font-medium">
+                للتصميم والدعاية والاعلان ومواقع الالكترونية والتصميم المعماري
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

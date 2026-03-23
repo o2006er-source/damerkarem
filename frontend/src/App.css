@@ -81,3 +81,23 @@
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
+
+/* Header company name animations */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.animate-fade-in-right-delay {
+    animation: fadeInRight 1s ease-out 0.3s both;
+}
