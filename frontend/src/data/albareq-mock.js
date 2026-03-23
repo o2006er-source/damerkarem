@@ -148,8 +148,10 @@ export const socialLinks = [
   { name: 'Behance', icon: 'palette', url: '#' }
 ];
 
-export const contactInfo = {
+export const companyInfo = {
+  name: 'شركة البريق للتصميم والدعاية والاعلان',
   email: 'albareq@dlr.iq',
   whatsapp: '07816699222',
-  phone: '07816699222'
+  phone: '07816699222',
+  address: 'بغداد، العراق'
 };
