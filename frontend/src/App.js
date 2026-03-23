@@ -4,6 +4,7 @@ import AlbareqHeader from './components/AlbareqHeader';
 import AlbareqFooter from './components/AlbareqFooter';
 import AlbareqHomeComplete from './pages/AlbareqHomeComplete';
 import AlbareqAbout from './pages/AlbareqAbout';
+import AlbareqServices from './pages/AlbareqServices';
 import AlbareqBlog from './pages/AlbareqBlog';
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AlbareqHomeComplete />} />
           <Route path="/about" element={<AlbareqAbout />} />
+          <Route path="/services" element={<AlbareqServices />} />
           <Route path="/blog" element={<AlbareqBlog />} />
           <Route path="/blog/:slug" element={<AlbareqBlog />} />
         </Routes>
