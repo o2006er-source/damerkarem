@@ -67,10 +67,10 @@ const AlbareqHeader = () => {
               className="h-14 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
             />
             <div className="hidden md:flex flex-col text-right">
-              <h1 className="text-white font-bold text-lg leading-tight animate-fade-in-right">
+              <h1 className="text-white font-bold text-lg leading-tight animate-fade-in-right animate-pulse-glow">
                 شركة البريق
               </h1>
-              <p className="text-[#FFB366] text-xs leading-tight animate-fade-in-right-delay font-medium">
+              <p className="text-[#FFB366] text-xs leading-tight animate-fade-in-right-delay animate-slide-subtle font-medium">
                 للتصميم والدعاية والاعلان ومواقع الالكترونية والتصميم المعماري
               </p>
             </div>
