@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Blog from './pages/Blog';
+import AlbareqHeader from './components/AlbareqHeader';
+import AlbareqBlog from './pages/AlbareqBlog';
 import './App.css';
 
 function App() {
   return (
     <div className="App" dir="rtl">
       <BrowserRouter>
-        <Header />
+        <AlbareqHeader />
         <Routes>
-          <Route path="/" element={<Blog />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<Blog />} />
+          <Route path="/" element={<AlbareqBlog />} />
+          <Route path="/blog" element={<AlbareqBlog />} />
+          <Route path="/blog/:slug" element={<AlbareqBlog />} />
         </Routes>
       </BrowserRouter>
     </div>
