@@ -113,41 +113,6 @@ const AlbareqFooter = () => {
           </div>
         </div>
 
-        {/* Tags Section */}
-        <div className="border-t border-[#2d4268] pt-8 pb-8">
-          <h3 className="text-2xl font-bold text-[#FFB366] text-center mb-6">الوسوم</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              '#تصميم_جرافيك',
-              '#هوية_تجارية',
-              '#شعارات',
-              '#دعاية_واعلان',
-              '#تسويق_رقمي',
-              '#مواقع_الكترونية',
-              '#تطبيقات_الموبايل',
-              '#تصميم_معماري',
-              '#موشن_جرافيك',
-              '#فيديو_اعلاني',
-              '#سوشيال_ميديا',
-              '#برمجة_مواقع',
-              '#تصميم_واجهات',
-              '#تجربة_المستخدم',
-              '#ابداع_بصري',
-              '#تصميم_عصري',
-              '#علامة_تجارية',
-              '#ديكور_داخلي',
-              '#حلول_تسويقية'
-            ].map((tag, index) => (
-              <span
-                key={index}
-                className="px-5 py-2.5 bg-[#2E5AAC] text-white rounded-full text-sm border-2 border-[#3d6fc4] hover:bg-[#FFB366] hover:border-[#FFB366] transition-all duration-300 cursor-pointer hover:scale-105"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-[#2d4268] pt-6 text-center">
           <p className="text-gray-400">
