@@ -14,7 +14,8 @@ const AlbareqPackages = () => {
       description: 'باقات متكاملة لإدارة وتصميم محتوى احترافي وجذاب يزيد من تفاعل جمهورك.',
       icon: '📱',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
-      link: '#social-media'
+      link: '#social-media',
+      slug: null
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ const AlbareqPackages = () => {
       description: 'نصمّم لك شعارات احترافية تعبّر عن هوية علامتك التجارية وتُميّزك في السوق.',
       icon: '🎨',
       image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop',
-      link: '#logos'
+      link: '#logos',
+      slug: 'logo-packages'
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ const AlbareqPackages = () => {
       description: 'إدارة حملاتك التسويقية باحتراف، مع إعداد استراتيجيات وتخطيط فعال لنجاحك.',
       icon: '📊',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-      link: '#marketing'
+      link: '#marketing',
+      slug: null
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ const AlbareqPackages = () => {
       description: 'تصاميم أنيقة للكتيبات، البروشورات، البوسترات، وبطاقات العمل، جاهزة للطباعة.',
       icon: '🖨️',
       image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop',
-      link: '#prints'
+      link: '#prints',
+      slug: null
     },
     {
       id: 5,
@@ -46,7 +50,8 @@ const AlbareqPackages = () => {
       description: 'تصميم وتطوير مواقع إلكترونية ومتاجر متكاملة وسريعة الاستجابة على جميع الأجهزة.',
       icon: '💻',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-      link: '#websites'
+      link: '#websites',
+      slug: null
     },
     {
       id: 6,
@@ -54,7 +59,8 @@ const AlbareqPackages = () => {
       description: 'تحسين ظهور موقعك في نتائج البحث لزيادة الزيارات والعملاء المحتملين.',
       icon: '🔍',
       image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=600&fit=crop',
-      link: '#seo'
+      link: '#seo',
+      slug: null
     },
     {
       id: 7,
@@ -62,7 +68,8 @@ const AlbareqPackages = () => {
       description: 'خدمات لزيادة عدد المتابعين وتحسين ظهور حسابك، مع استهداف دقيق.',
       icon: '👥',
       image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&h=600&fit=crop',
-      link: '#followers'
+      link: '#followers',
+      slug: null
     },
     {
       id: 8,
@@ -70,7 +77,8 @@ const AlbareqPackages = () => {
       description: 'خدمة تصوير الصور والفيديو (Reels) تعرض منتجاتك أو خدماتك بأسلوب عصري وجذاب',
       icon: '📸',
       image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=600&fit=crop',
-      link: '#photography'
+      link: '#photography',
+      slug: null
     }
   ];
 
@@ -349,37 +357,43 @@ const AlbareqPackages = () => {
             {/* Package Categories Grid */}
             <div className="lg:col-span-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {packageCategories.map((pkg) => (
-                  <Card 
-                    key={pkg.id} 
-                    id={pkg.link.replace('#', '')}
-                    className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer scroll-mt-32"
-                  >
-                    <div className="h-48 overflow-hidden relative">
-                      <img
-                        src={pkg.image}
-                        alt={pkg.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] to-transparent opacity-60"></div>
-                      <div className="absolute top-4 right-4 text-5xl">
-                        {pkg.icon}
-                      </div>
-                    </div>
-                    <div className="p-6 text-right">
-                      <h3 className="text-2xl font-bold text-white mb-3">
-                        {pkg.title}
-                      </h3>
-                      <p className="text-gray-200 text-base leading-relaxed mb-4">
-                        {pkg.description}
-                      </p>
-                      <Button className="bg-[#FFB366] hover:bg-[#FFA04D] text-white w-full rounded-lg flex items-center justify-center gap-2">
-                        استكشف الباقات
-                        <ArrowLeft className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  </Card>
-                ))}
+                {packageCategories.map((pkg) => {
+                  const CardWrapper = pkg.slug ? Link : 'div';
+                  const cardProps = pkg.slug ? { to: `/packages/${pkg.slug}` } : {};
+                  
+                  return (
+                    <CardWrapper key={pkg.id} {...cardProps}>
+                      <Card 
+                        id={pkg.link.replace('#', '')}
+                        className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer scroll-mt-32"
+                      >
+                        <div className="h-48 overflow-hidden relative">
+                          <img
+                            src={pkg.image}
+                            alt={pkg.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] to-transparent opacity-60"></div>
+                          <div className="absolute top-4 right-4 text-5xl">
+                            {pkg.icon}
+                          </div>
+                        </div>
+                        <div className="p-6 text-right">
+                          <h3 className="text-2xl font-bold text-white mb-3">
+                            {pkg.title}
+                          </h3>
+                          <p className="text-gray-200 text-base leading-relaxed mb-4">
+                            {pkg.description}
+                          </p>
+                          <Button className="bg-[#FFB366] hover:bg-[#FFA04D] text-white w-full rounded-lg flex items-center justify-center gap-2">
+                            {pkg.slug ? 'عرض التفاصيل والأسعار' : 'استكشف الباقات'}
+                            <ArrowLeft className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </Card>
+                    </CardWrapper>
+                  );
+                })}
               </div>
             </div>
           </div>

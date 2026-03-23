@@ -8,6 +8,7 @@ import AlbareqServices from './pages/AlbareqServices';
 import AlbareqPortfolio from './pages/AlbareqPortfolio';
 import AlbareqProjectDetails from './pages/AlbareqProjectDetails';
 import AlbareqPackages from './pages/AlbareqPackages';
+import AlbareqPackageDetails from './pages/AlbareqPackageDetails';
 import AlbareqFAQ from './pages/AlbareqFAQ';
 import AlbareqContact from './pages/AlbareqContact';
 import AlbareqBlog from './pages/AlbareqBlog';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/portfolio" element={<AlbareqPortfolio />} />
           <Route path="/portfolio/:slug" element={<AlbareqProjectDetails />} />
           <Route path="/packages" element={<AlbareqPackages />} />
+          <Route path="/packages/:slug" element={<AlbareqPackageDetails />} />
           <Route path="/faq" element={<AlbareqFAQ />} />
           <Route path="/contact" element={<AlbareqContact />} />
           <Route path="/blog" element={<AlbareqBlog />} />
