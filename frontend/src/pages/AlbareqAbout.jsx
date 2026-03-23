@@ -225,7 +225,17 @@ const AlbareqAbout = () => {
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/CorelDRAW_2020_icon.svg/120px-CorelDRAW_2020_icon.svg.png" alt="CorelDRAW" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/120px-Postgresql_elephant.svg.png" alt="PostgreSQL" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex-shrink-0 mx-4">
@@ -250,12 +260,42 @@ const AlbareqAbout = () => {
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Notion_app_logo.png/120px-Notion_app_logo.png" alt="Notion" className="w-full h-full object-contain" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/120px-Slack_Technologies_Logo.svg.png" alt="Slack" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/120px-Figma-logo.svg.png" alt="Figma" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/120px-Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/120px-Sass_Logo_Color.svg.png" alt="Sass" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/120px-Typescript_logo_2020.svg.png" alt="TypeScript" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/120px-CSS3_logo.svg.png" alt="CSS3" className="w-full h-full object-contain" />
                 </div>
               </div>
 
@@ -287,7 +327,17 @@ const AlbareqAbout = () => {
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/CorelDRAW_2020_icon.svg/120px-CorelDRAW_2020_icon.svg.png" alt="CorelDRAW" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/120px-Postgresql_elephant.svg.png" alt="PostgreSQL" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex-shrink-0 mx-4">
@@ -312,12 +362,42 @@ const AlbareqAbout = () => {
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Notion_app_logo.png/120px-Notion_app_logo.png" alt="Notion" className="w-full h-full object-contain" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/120px-Slack_Technologies_Logo.svg.png" alt="Slack" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex-shrink-0 mx-4">
                 <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/120px-Figma-logo.svg.png" alt="Figma" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/120px-Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/120px-Sass_Logo_Color.svg.png" alt="Sass" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/120px-Typescript_logo_2020.svg.png" alt="TypeScript" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/120px-CSS3_logo.svg.png" alt="CSS3" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
