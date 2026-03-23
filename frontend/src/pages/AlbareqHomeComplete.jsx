@@ -321,9 +321,9 @@ const AlbareqHomeComplete = () => {
             </div>
             <div className="flex justify-center">
               <img 
-                src="/albareq-logo.png" 
-                alt="شركة البريق" 
-                className="w-full max-w-lg drop-shadow-2xl"
+                src="/team-work.png" 
+                alt="فريق شركة البريق" 
+                className="w-full max-w-lg rounded-2xl shadow-2xl"
               />
             </div>
           </div>
