@@ -6,6 +6,7 @@ import AlbareqHomeComplete from './pages/AlbareqHomeComplete';
 import AlbareqAbout from './pages/AlbareqAbout';
 import AlbareqServices from './pages/AlbareqServices';
 import AlbareqPortfolio from './pages/AlbareqPortfolio';
+import AlbareqProjectDetails from './pages/AlbareqProjectDetails';
 import AlbareqPackages from './pages/AlbareqPackages';
 import AlbareqFAQ from './pages/AlbareqFAQ';
 import AlbareqContact from './pages/AlbareqContact';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<AlbareqAbout />} />
           <Route path="/services" element={<AlbareqServices />} />
           <Route path="/portfolio" element={<AlbareqPortfolio />} />
+          <Route path="/portfolio/:slug" element={<AlbareqProjectDetails />} />
           <Route path="/packages" element={<AlbareqPackages />} />
           <Route path="/faq" element={<AlbareqFAQ />} />
           <Route path="/contact" element={<AlbareqContact />} />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 
@@ -17,6 +18,7 @@ const AlbareqPortfolio = () => {
     {
       id: 1,
       title: 'تصاميم بوستات سوشيال ميديا | جامعة الرافدين',
+      slug: 'social-media-alrafidain-university',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop',
       description: 'تصاميم سوشيال ميديا لجامعة الرافدين في بغداد بأسلوب موحد'
@@ -24,6 +26,7 @@ const AlbareqPortfolio = () => {
     {
       id: 2,
       title: 'تصميم أكياس كرتونية | الفرسان للموبايل',
+      slug: 'packaging-design-alfursan-mobile',
       category: 'prints',
       image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
       description: 'أكياس كرتونية بتصميم فاخر لشركة الفرسان للموبايلات'
@@ -31,6 +34,7 @@ const AlbareqPortfolio = () => {
     {
       id: 3,
       title: 'تصميم موقع الكتروني | اوس حسين',
+      slug: 'website-design-aws-hussein',
       category: 'websites',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
       description: 'موقع إلكتروني شخصي يعرض أعمال المصمم'
@@ -38,6 +42,7 @@ const AlbareqPortfolio = () => {
     {
       id: 4,
       title: 'تصاميم سوشيال ميديا | مؤيد بدن',
+      slug: 'social-media-muayad-badan',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop',
       description: 'تصاميم لشركة تنظيم الفعاليات والمهرجانات'
@@ -270,28 +275,29 @@ const AlbareqPortfolio = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <Card 
-                key={project.id} 
-                className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
-              >
-                <div className="h-64 overflow-hidden relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white text-sm leading-relaxed">
-                      {project.description}
-                    </p>
+              <Link to={`/portfolio/${project.slug}`} key={project.id}>
+                <Card 
+                  className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
+                >
+                  <div className="h-64 overflow-hidden relative">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                      <p className="text-white text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6 text-right">
-                  <h3 className="text-xl font-bold text-white leading-relaxed">
-                    {project.title}
-                  </h3>
-                </div>
-              </Card>
+                  <div className="p-6 text-right">
+                    <h3 className="text-xl font-bold text-white leading-relaxed">
+                      {project.title}
+                    </h3>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
 
