@@ -10,6 +10,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import AlbareqBlogCard from '../components/AlbareqBlogCard';
 import { blogPosts } from '../data/albareq-mock';
 import { clientLogos, portfolioItems, portfolioCategories, teamMembers, packages, testimonials } from '../data/additional-mock';
+import { projectsData } from '../data/projects-data';
 
 const AlbareqHomeComplete = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -251,27 +252,43 @@ const AlbareqHomeComplete = () => {
 
           {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredPortfolio.slice(0, 8).map((item) => (
-              <Card key={item.id} className="bg-[#2E5AAC] border-[#3d6bc4] overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
-                <div className="relative overflow-hidden h-48">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] to-transparent opacity-60"></div>
+            {filteredPortfolio.slice(0, 8).map((item) => {
+              // Find matching project with slug
+              const project = projectsData.find(p => p.id === item.id);
+              const slug = project ? project.slug : null;
+              
+              const cardContent = (
+                <Card className="bg-[#2E5AAC] border-[#3d6bc4] overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="relative overflow-hidden h-48">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] to-transparent opacity-60"></div>
+                  </div>
+                  <div className="p-4">
+                    <Badge className="bg-[#FFB366] text-white border-0 mb-2 text-xs">
+                      {item.category}
+                    </Badge>
+                    <h3 className="text-white font-bold text-sm line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-400 text-xs mt-1">{item.date}</p>
+                  </div>
+                </Card>
+              );
+              
+              return slug ? (
+                <Link to={`/portfolio/${slug}`} key={item.id}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={item.id}>
+                  {cardContent}
                 </div>
-                <div className="p-4">
-                  <Badge className="bg-[#FFB366] text-white border-0 mb-2 text-xs">
-                    {item.category}
-                  </Badge>
-                  <h3 className="text-white font-bold text-sm line-clamp-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-400 text-xs mt-1">{item.date}</p>
-                </div>
-              </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
