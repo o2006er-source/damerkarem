@@ -194,37 +194,132 @@ const AlbareqAbout = () => {
             </p>
           </div>
           
-          {/* Software Icons Grid */}
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-6 items-center">
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Google_Ads_logo.svg/120px-Google_Ads_logo.svg.png" alt="Google Ads" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/120px-Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Illustrator" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/120px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Adobe Premiere Pro" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/120px-Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/120px-Adobe_After_Effects_CC_icon.svg.png" alt="Adobe After Effects" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/120px-Adobe_InDesign_CC_icon.svg.png" alt="Adobe InDesign" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/WordPress_Blue_logo.png/120px-WordPress_Blue_logo.png" alt="WordPress CMS" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/120px-WordPress_blue_logo.svg.png" alt="WP" className="h-16 object-contain" />
-            </div>
-            <div className="flex justify-center p-4 bg-[#2E5AAC] rounded-lg hover:scale-110 transition-transform duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/120px-Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" className="h-16 object-contain" />
+          {/* Animated Software Icons Carousel */}
+          <div className="overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First Set */}
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/120px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/120px-Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/120px-Adobe_InDesign_CC_icon.svg.png" alt="InDesign" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/120px-Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/120px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/120px-React-icon.svg.png" alt="React" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/120px-Node.js_logo.svg.png" alt="Node.js" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Google_Ads_logo.svg/120px-Google_Ads_logo.svg.png" alt="Google Ads" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/120px-Canva_icon_2021.svg.png" alt="Canva" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Notion_app_logo.png/120px-Notion_app_logo.png" alt="Notion" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code" className="w-full h-full object-contain" />
+                </div>
+              </div>
+
+              {/* Duplicate Set for Seamless Loop */}
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/120px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/120px-Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/120px-Adobe_InDesign_CC_icon.svg.png" alt="InDesign" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/120px-Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/120px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/120px-WordPress_logo.svg.png" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/120px-React-icon.svg.png" alt="React" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/120px-Node.js_logo.svg.png" alt="Node.js" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Google_Ads_logo.svg/120px-Google_Ads_logo.svg.png" alt="Google Ads" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/120px-Canva_icon_2021.svg.png" alt="Canva" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Notion_app_logo.png/120px-Notion_app_logo.png" alt="Notion" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              <div className="flex-shrink-0 mx-4">
+                <div className="w-32 h-32 bg-[#2E5AAC] rounded-lg flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code" className="w-full h-full object-contain" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
