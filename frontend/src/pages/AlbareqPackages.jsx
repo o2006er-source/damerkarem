@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Check, ArrowLeft } from 'lucide-react';
 
 const AlbareqPackages = () => {
+  const [activeTab, setActiveTab] = useState('packages');
+
   const packageCategories = [
     {
       id: 1,
@@ -287,8 +289,105 @@ const AlbareqPackages = () => {
         </div>
       </section>
 
+      {/* Tabs Navigation */}
+      <section className="py-8 px-6 bg-[#1e3a61] sticky top-0 z-40">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex justify-center gap-8">
+            <button
+              onClick={() => setActiveTab('packages')}
+              className={`text-2xl font-bold pb-4 border-b-4 transition-all duration-300 ${
+                activeTab === 'packages'
+                  ? 'text-[#FFB366] border-[#FFB366]'
+                  : 'text-gray-300 border-transparent hover:text-white'
+              }`}
+            >
+              الباقات
+            </button>
+            <Link
+              to="/blog"
+              className="text-2xl font-bold pb-4 border-b-4 border-transparent text-gray-300 hover:text-white transition-all duration-300"
+            >
+              المقالات
+            </Link>
+            <Link
+              to="/faq"
+              className="text-2xl font-bold pb-4 border-b-4 border-transparent text-gray-300 hover:text-white transition-all duration-300"
+            >
+              الأسئلة الشائعة
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Package Categories with Menu */}
+      <section className="py-16 px-6 bg-[#1a2f52]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Categories Menu */}
+            <div className="lg:col-span-1">
+              <Card className="bg-[#2E5AAC] border-0 p-6 sticky top-32">
+                <h3 className="text-2xl font-bold text-white mb-6 text-right">اختر الباقة المناسبة لمشروعك</h3>
+                <div className="space-y-2">
+                  {packageCategories.map((category) => (
+                    <a
+                      key={category.id}
+                      href={category.link}
+                      className="block p-4 bg-[#1a2f52] hover:bg-[#1e3a61] rounded-lg transition-all duration-300 text-right group"
+                    >
+                      <div className="flex items-center gap-3 justify-end">
+                        <span className="text-white font-semibold group-hover:text-[#FFB366] transition-colors">
+                          {category.title}
+                        </span>
+                        <span className="text-2xl">{category.icon}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </Card>
+            </div>
+
+            {/* Package Categories Grid */}
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {packageCategories.map((pkg) => (
+                  <Card 
+                    key={pkg.id} 
+                    id={pkg.link.replace('#', '')}
+                    className="bg-[#2E5AAC] border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer scroll-mt-32"
+                  >
+                    <div className="h-48 overflow-hidden relative">
+                      <img
+                        src={pkg.image}
+                        alt={pkg.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f52] to-transparent opacity-60"></div>
+                      <div className="absolute top-4 right-4 text-5xl">
+                        {pkg.icon}
+                      </div>
+                    </div>
+                    <div className="p-6 text-right">
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        {pkg.title}
+                      </h3>
+                      <p className="text-gray-200 text-base leading-relaxed mb-4">
+                        {pkg.description}
+                      </p>
+                      <Button className="bg-[#FFB366] hover:bg-[#FFA04D] text-white w-full rounded-lg flex items-center justify-center gap-2">
+                        استكشف الباقات
+                        <ArrowLeft className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Package Categories Grid */}
-      <section className="py-16 px-6 bg-[#1e3a61]">
+      <section className="py-16 px-6 bg-[#1e3a61] hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {packageCategories.map((pkg) => (
