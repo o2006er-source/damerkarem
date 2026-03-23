@@ -50,6 +50,7 @@ const AlbareqPortfolio = () => {
     {
       id: 5,
       title: 'تصميم شعار وهوية بصرية | فكرة',
+      slug: 'logo-design-feekra',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop',
       description: 'شعار وهوية بصرية لوكالة Feekra Agency'
@@ -57,6 +58,7 @@ const AlbareqPortfolio = () => {
     {
       id: 6,
       title: 'تصميم شعار وهوية بصرية | تاج مرمرة للسياحة',
+      slug: 'logo-design-taj-marmara',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop',
       description: 'شعار وهوية بصرية لشركة تاج مرمرة السياحية في تركيا'
@@ -64,6 +66,7 @@ const AlbareqPortfolio = () => {
     {
       id: 7,
       title: 'تصاميم سوشيال ميديا | مدرسة المناهل',
+      slug: 'social-media-almanahil',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop',
       description: 'تصاميم سوشيال ميديا لمدرسة المناهل الابتدائية الأهلية'
@@ -71,6 +74,7 @@ const AlbareqPortfolio = () => {
     {
       id: 8,
       title: 'تصميم متجر الكتروني | مطبعة رسمات',
+      slug: 'ecommerce-rasamat',
       category: 'websites',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       description: 'متجر إلكتروني احترافي لمطبعة رسمات'
@@ -78,6 +82,7 @@ const AlbareqPortfolio = () => {
     {
       id: 9,
       title: 'تصاميم سوشيال ميديا | الابتسامة البيضاء للاسنان',
+      slug: 'social-media-white-smile',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop',
       description: 'حملة سوشيال ميديا لعيادة الابتسامة البيضاء'
@@ -85,6 +90,7 @@ const AlbareqPortfolio = () => {
     {
       id: 10,
       title: 'تصميم متجر الكتروني | نيرفا براندز',
+      slug: 'ecommerce-nirva-brands',
       category: 'websites',
       image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
       description: 'تصميم متجر الكتروني لنيرفا براندز'
@@ -92,6 +98,7 @@ const AlbareqPortfolio = () => {
     {
       id: 11,
       title: 'تصاميم سوشيال ميديا | دكتور علي',
+      slug: 'social-media-dr-ali',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
       description: 'حملة سوشيال ميديا لمركز AHJ – متخصص في الجهاز الهضمي'
@@ -99,6 +106,7 @@ const AlbareqPortfolio = () => {
     {
       id: 12,
       title: 'تصاميم سوشيال ميديا | اكاديمية سهلة',
+      slug: 'social-media-sahlah-academy',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop',
       description: 'منشورات سوشيال ميديا لمنصة Sahlah التعليمية'
@@ -106,6 +114,7 @@ const AlbareqPortfolio = () => {
     {
       id: 13,
       title: 'تصميم متجر الكتروني | بيع بالجملة',
+      slug: 'ecommerce-wholesale',
       category: 'websites',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       description: 'تصميم متجر الكتروني بالجملة'
@@ -113,6 +122,7 @@ const AlbareqPortfolio = () => {
     {
       id: 14,
       title: 'تصميم مينيو | مطعم تاج العراق',
+      slug: 'menu-design-taj-aliraq',
       category: 'prints',
       image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop',
       description: 'تصميم مينيو مطعم تاج العراق'
@@ -120,6 +130,7 @@ const AlbareqPortfolio = () => {
     {
       id: 15,
       title: 'تصميم مطبوعات | يارا للكوزمتيك',
+      slug: 'packaging-design-yara',
       category: 'prints',
       image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
       description: 'تصميم علبة عطر'
@@ -127,6 +138,7 @@ const AlbareqPortfolio = () => {
     {
       id: 16,
       title: 'تصاميم سوشيال ميديا | متجر سبارز الالكتروني',
+      slug: 'social-media-sparzz',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1607703703520-bb638e84caf2?w=800&h=600&fit=crop',
       description: 'منشورات سوشيال ميديا لمنتجات Sparzz'
@@ -134,6 +146,7 @@ const AlbareqPortfolio = () => {
     {
       id: 17,
       title: 'تصميم مطبوعات | رارو',
+      slug: 'print-design-raro',
       category: 'prints',
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
       description: 'تصميم مطبوعات شركة RARO للأزياء النسائية'
@@ -141,6 +154,7 @@ const AlbareqPortfolio = () => {
     {
       id: 18,
       title: 'تصميم شعار وهوية بصرية | اشتريلي للتسوق',
+      slug: 'logo-design-eshtareli',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=600&fit=crop',
       description: 'شعار اشترِلي لتطبيق التسوق الإلكتروني'
@@ -148,6 +162,7 @@ const AlbareqPortfolio = () => {
     {
       id: 19,
       title: 'تصميم مطبوعات | نيرو',
+      slug: 'print-design-nero',
       category: 'prints',
       image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop',
       description: 'تصميم مطبوعات نيرو'
@@ -155,6 +170,7 @@ const AlbareqPortfolio = () => {
     {
       id: 20,
       title: 'تصاميم سوشيال ميديا | متجر زالزال الالكتروني',
+      slug: 'social-media-zalzal',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
       description: 'منشورات سوشيال ميديا لمتجر Zalzal'
@@ -162,6 +178,7 @@ const AlbareqPortfolio = () => {
     {
       id: 21,
       title: 'تصاميم سوشيال ميديا | كاريزما للسياحة',
+      slug: 'social-media-karisma-tourism',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=600&fit=crop',
       description: 'تصاميم سوشيال ميديا كاريزما للسياحة'
@@ -169,6 +186,7 @@ const AlbareqPortfolio = () => {
     {
       id: 22,
       title: 'تصاميم سوشيال ميديا | افيون للسياحة',
+      slug: 'social-media-afyon-tourism',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop',
       description: 'تصاميم سوشيال ميديا افيون للسياحة'
@@ -176,6 +194,7 @@ const AlbareqPortfolio = () => {
     {
       id: 23,
       title: 'تصميم متجر الكتروني | سبارز',
+      slug: 'ecommerce-sparzz-store',
       category: 'websites',
       image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop',
       description: 'تصميم متجر الكتروني سبارز'
@@ -183,6 +202,7 @@ const AlbareqPortfolio = () => {
     {
       id: 24,
       title: 'تصاميم سوشيال ميديا | بطاطا ايف',
+      slug: 'social-media-batata-eve',
       category: 'social',
       image: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=800&h=600&fit=crop',
       description: 'تصاميم سوشيال ميديا بطاطا ايف'
@@ -190,6 +210,7 @@ const AlbareqPortfolio = () => {
     {
       id: 25,
       title: 'تصميم شعار وهوية بصرية | الصنوبر للانتاج الفني',
+      slug: 'logo-design-alsanobar',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
       description: 'تصميم شعار وهوية بصرية الصنوبر للانتاج الفني'
@@ -197,6 +218,7 @@ const AlbareqPortfolio = () => {
     {
       id: 26,
       title: 'تصميم شعار وهوية بصرية | ك بالجملة',
+      slug: 'logo-design-k-wholesale',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop',
       description: 'تصميم شعار وهويه بصرية ك بالجملة'
@@ -204,6 +226,7 @@ const AlbareqPortfolio = () => {
     {
       id: 27,
       title: 'تصميم شعار وهوية بصرية | ازياء محمد رسول',
+      slug: 'logo-design-mohammed-rasool',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop',
       description: 'تصميم شعار وهوية بصرية لازياء محمد رسول'
@@ -211,6 +234,7 @@ const AlbareqPortfolio = () => {
     {
       id: 28,
       title: 'تصميم شعار وهوية بصرية | صوفيا للابسة',
+      slug: 'logo-design-sofia',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1600096194534-95cf5ece04cf?w=800&h=600&fit=crop',
       description: 'تصميم شعار وهوية بصرية لصوفيا للالبسة'
@@ -218,6 +242,7 @@ const AlbareqPortfolio = () => {
     {
       id: 29,
       title: 'الشعارات المصممة 2022',
+      slug: 'logo-portfolio-2022',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&h=600&fit=crop',
       description: 'الشعارات المصممه 2022'
@@ -225,6 +250,7 @@ const AlbareqPortfolio = () => {
     {
       id: 30,
       title: 'الشعارات المصممة 2021',
+      slug: 'logo-portfolio-2021',
       category: 'logos',
       image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop',
       description: 'تصميم شعار في عام 2021'
