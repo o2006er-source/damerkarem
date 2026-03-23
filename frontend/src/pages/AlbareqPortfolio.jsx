@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+import { projectsData } from '../data/projects-data';
 
 const AlbareqPortfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -14,39 +15,16 @@ const AlbareqPortfolio = () => {
     { id: 'websites', name: 'مواقع', nameEn: 'مواقع' }
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: 'تصاميم بوستات سوشيال ميديا | جامعة الرافدين',
-      slug: 'social-media-alrafidain-university',
-      category: 'social',
-      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop',
-      description: 'تصاميم سوشيال ميديا لجامعة الرافدين في بغداد بأسلوب موحد'
-    },
-    {
-      id: 2,
-      title: 'تصميم أكياس كرتونية | الفرسان للموبايل',
-      slug: 'packaging-design-alfursan-mobile',
-      category: 'prints',
-      image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-      description: 'أكياس كرتونية بتصميم فاخر لشركة الفرسان للموبايلات'
-    },
-    {
-      id: 3,
-      title: 'تصميم موقع الكتروني | اوس حسين',
-      slug: 'website-design-aws-hussein',
-      category: 'websites',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-      description: 'موقع إلكتروني شخصي يعرض أعمال المصمم'
-    },
-    {
-      id: 4,
-      title: 'تصاميم سوشيال ميديا | مؤيد بدن',
-      slug: 'social-media-muayad-badan',
-      category: 'social',
-      image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop',
-      description: 'تصاميم لشركة تنظيم الفعاليات والمهرجانات'
-    },
+  // Extended projects list with basic info only
+  const allProjects = [
+    ...projectsData.map(p => ({
+      id: p.id,
+      title: p.title,
+      slug: p.slug,
+      category: p.category,
+      image: p.image,
+      description: p.description || ''
+    })),
     {
       id: 5,
       title: 'تصميم شعار وهوية بصرية | فكرة',
@@ -258,8 +236,8 @@ const AlbareqPortfolio = () => {
   ];
 
   const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    ? allProjects 
+    : allProjects.filter(project => project.category === activeFilter);
 
   return (
     <div className="min-h-screen bg-[#1a2f52]">
