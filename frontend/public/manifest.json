@@ -1,0 +1,35 @@
+{
+  "short_name": "البريق",
+  "name": "شركة البريق للتصميم والدعاية والإعلان",
+  "description": "شركة متخصصة في التصميم الجرافيكي، الهويات التجارية، المواقع الإلكترونية، والتصميم المعماري",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "albareq-logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "albareq-logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2E5AAC",
+  "background_color": "#1a2f52",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["business", "design", "marketing"],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
