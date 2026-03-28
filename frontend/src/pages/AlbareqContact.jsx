@@ -18,20 +18,48 @@ const AlbareqContact = () => {
     contactMethod: ''
   });
 
-  const handleSubmit = (e) => {
+  const [submitStatus, setSubmitStatus] = useState('idle'); // idle, loading, success, error
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('بيانات النموذج:', formData);
-    alert('شكراً لك! سنتواصل معك قريباً.');
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      companyName: '',
-      designType: '',
-      projectDetails: '',
-      budget: '',
-      contactMethod: ''
-    });
+    setSubmitStatus('loading');
+    
+    try {
+      // استخدام Formspree لإرسال النموذج
+      // استبدل 'YOUR_FORMSPREE_ID' بمعرفك من formspree.io
+      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // إعادة تعيين النموذج بعد 3 ثوانٍ
+        setTimeout(() => {
+          setFormData({
+            fullName: '',
+            email: '',
+            phone: '',
+            companyName: '',
+            designType: '',
+            projectDetails: '',
+            budget: '',
+            contactMethod: ''
+          });
+          setSubmitStatus('idle');
+        }, 3000);
+      } else {
+        setSubmitStatus('error');
+        setTimeout(() => setSubmitStatus('idle'), 3000);
+      }
+    } catch (error) {
+      console.error('خطأ في إرسال النموذج:', error);
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    }
   };
 
   const handleChange = (e) => {
@@ -248,10 +276,33 @@ const AlbareqContact = () => {
                   <Button 
                     type="submit"
                     className="w-full bg-[#FFB366] hover:bg-[#FFA04D] text-white py-6 text-xl rounded-full flex items-center justify-center gap-2"
+                    disabled={submitStatus === 'loading'}
                   >
-                    <span>أرسل طلبك الآن</span>
-                    <Send className="w-5 h-5" />
+                    {submitStatus === 'loading' ? (
+                      <>
+                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                        جاري الإرسال...
+                      </>
+                    ) : (
+                      <>
+                        <span>أرسل طلبك الآن</span>
+                        <Send className="w-5 h-5" />
+                      </>
+                    )}
                   </Button>
+
+                  {/* رسائل الحالة */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-4 bg-green-500 text-white rounded-lg text-center">
+                      ✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-4 bg-red-500 text-white rounded-lg text-center">
+                      ❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى أو التواصل عبر واتساب.
+                    </div>
+                  )}
                 </form>
               </Card>
             </div>
